@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo quidem mollitia repudiandae omnis illum,
+            assumenda fugit dolorem hic aliquid quisquam dolore tempore vitae ratione. Ut, voluptates ad. Iusto, vitae
+            repellendus!</p>
+    </div>
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo quidem mollitia repudiandae omnis illum,
+            assumenda fugit dolorem hic aliquid quisquam dolore tempore vitae ratione. Ut, voluptates ad. Iusto, vitae
+            repellendus!</p>
+    </div>
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo quidem mollitia repudiandae omnis illum,
+            assumenda fugit dolorem hic aliquid quisquam dolore tempore vitae ratione. Ut, voluptates ad. Iusto, vitae
+            repellendus!</p>
+    </div>
+
+
+</body>
+
+<script>
+    var acc = document.getElementsByClassName('accordion');
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle('active');
+            var panel = this.nextElementSibling;
+            var panel = this.nextElementSibling;
+
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            }
+            else {
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+            }
+
+        });
+    }
+
+</script>
+
+</html>
